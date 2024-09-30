@@ -1,0 +1,54 @@
+param f:=4; # number of potential facilities to open
+param c:=13; # number of customers
+
+param Cji:  # variable transportation cost (per kg)
+	 1		2		3		4		5		6		7		8		9		10		11		12		13:=
+1	0.000	0.066	0.043	0.030	0.033	0.079	0.020	0.049	0.039	0.083	0.063	0.073	0.089
+2	0.079	0.000	0.036	0.026	0.206	0.056	0.076	0.056	0.083	0.096	0.089	0.099	0.113
+3	0.076	0.056	0.040	0.073	0.231	0.000	0.089	0.049	0.089	0.073	0.0863	0.106	0.123
+4	0.083	0.113	0.089	0.099	0.479	0.123	0.096	0.073	0.053	0.0531	0.0365	0.0179	0.000
+;
+
+
+# Defining Demand per customer i (kg)
+param Di:=
+	1 1825.6
+	2 2114
+	3 1033.2
+	4 313.6
+	5 355.6
+	6 1010.8
+	7 568.4
+	8 131.6
+	9 75.6
+	10 131.6
+	11 218.4
+	12 145.6
+	13 336
+	;
+	
+# Defining Supply per Facility j
+param Sj:=
+	1 6498.05
+	2 1476.13
+	3 870.56
+	4 536.42
+	;
+	
+# Defining Opening Cost (Rent Cost + Labor) Per Week
+param Oj:=
+	1 300
+	2 250
+	3 270
+	4 230
+	;
+	
+# Defining Maximum Truck Capacity (One ton)
+# Check this out, how to account for various cycles from same township
+param T := 1000;
+
+# Defining Fixed Cost for Renting Truck
+param F := 30;
+# Defining big M
+param M:= 100000;
+		

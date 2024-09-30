@@ -1,0 +1,8 @@
+#reset;
+option solver cplexamp;
+#option cplex_options 'OPTIONS';
+#model simplified_model.mod;
+#data simplified_model.dat;
+solve;
+expand total_cost;
+display total_cost, Xji;
