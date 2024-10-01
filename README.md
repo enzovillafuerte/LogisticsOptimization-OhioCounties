@@ -53,4 +53,4 @@ C5: Xji≤M∙ Zji , 		∀j,i
 X_ji≥0  
 Y_j∈{0,1}
 Z_ji∈{0,1}
-![image](https://github.com/user-attachments/assets/2de6d587-7eeb-47d6-861a-608e05aa202a)
+
