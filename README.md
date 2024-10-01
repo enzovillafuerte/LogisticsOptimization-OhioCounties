@@ -14,43 +14,8 @@ Assumptions:
 	The truck will have capacity limitations of 1,000 kg of storage available for transporting goods.
 
 
-Objective:   Minimize overall costs associated with the opening of new facilities and transportation of products from facilities j while satisfying demand for all the points I
-Parameters and Sets:
-D_i , demand at point i, i=1, 2,…,m; 
-S_j, supply at facility j, j=1, 2,…,n; 
-X_ji, quantity of goods (kg) transported from j to i;
-C_ji, variable transportation cost per unit (kg) from j to i;
-O_j, cost of opening facility j;
-M, big M.
-T, maximum truck capacity (1,000kg);
-F, fixed cost for renting a truck ($30)
+<img width="496" alt="Screenshot 2024-09-30 at 8 01 36 PM" src="https://github.com/user-attachments/assets/f8af9a3e-d7df-4574-aa05-e76a9fbe84ba">
 
-Constraints:
-C1: Supply Constraint.
-C2: Demand Constraint.
-C3: Facility Opening Constraint.
-C4: Truck Capacity Constraint.
-C5: Fixed Rental Costs per Truck Utilized Constraint.
+<img width="367" alt="Screenshot 2024-09-30 at 8 01 48 PM" src="https://github.com/user-attachments/assets/1e533ffb-c9d7-4a4c-8353-c5e6537481bd">
 
-Metric:  USD ($)
-
-Decision Variables:	
- x_ji={quantity of goods (kg) transported from j to i;}┤ 
-Y_(j    )= {█( 1,if facility j is estimated to be opened @0,otherwise;)┤
-Z_ji= {█(1,if goods are being transported from j to i @0,otherwise;)┤
-
- 
-
-Mathematical Model
-OF:  MIN  ∑_(j=1)^n▒〖〖 ∑_(i=1)^m▒(C_ji∙ X_ji  +F ∙ Z_ji ) 〗_ + 〗 ∑_(j=1)^n▒〖O_j∙Y_j 〗
-s.t. 
-C1: ∑_(i=1)^m▒〖Xji≤Sj〗 ,       		∀j
-C2: ∑_(j=1)^n▒〖Xji≥ Di〗 ,     		∀i
-C3: ∑_(i=1)^m▒〖Xji≤M∙Yj 〗, 		∀j
-C4: Xji≤T, 			∀j,i
-C5: Xji≤M∙ Zji , 		∀j,i
-
-X_ji≥0  
-Y_j∈{0,1}
-Z_ji∈{0,1}
-
+<img width="343" alt="Screenshot 2024-09-30 at 8 02 00 PM" src="https://github.com/user-attachments/assets/1c9f489f-3989-4266-8d28-450ef39511d6">
